@@ -1,4 +1,5 @@
-# create labels scripts
+# labels creation script
+# Created a script that one-hot encodes the target variable for multi-label classification using MultiLabelBinarizer
 
 import pandas as pd
 from sklearn.preprocessing import MultiLabelBinarizer
