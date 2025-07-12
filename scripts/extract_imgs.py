@@ -44,7 +44,7 @@ def find_img_folder(dataset):
 
     return dataset
 
-
+""" [Delete]
 # copies images to a specified folder
 def move_imgs(dataset, destination):
 
@@ -58,3 +58,13 @@ def move_imgs(dataset, destination):
             return
         else:
             shutil.copy2(source_path, dest_path)
+"""
+
+
+# Locate images and stores it in a list
+def locate_imgs(dataset, loc):
+
+    # locates the source path for all images in the dataset
+    for row in range(dataset.shape[0]):
+        source_path = os.path.join(path, dataset.iloc[row]["src_folder"], "images", dataset.iloc[row]["image_index"])
+        loc.append(source_path)
