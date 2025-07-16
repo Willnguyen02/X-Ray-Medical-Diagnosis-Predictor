@@ -2,7 +2,6 @@
 
 import pandas as pd
 import kagglehub
-import shutil
 import os 
 import warnings
 warnings.filterwarnings("ignore")
