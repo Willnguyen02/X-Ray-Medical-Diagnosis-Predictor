@@ -45,8 +45,3 @@ labels=[
     'Pneumonia',
     'Pneumothorax'
 ]
-
-
-
-
-
