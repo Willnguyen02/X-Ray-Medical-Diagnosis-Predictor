@@ -1,6 +1,8 @@
 # datat utility script
 
+import os
 import kagglehub
+from PIL import Image
 
 path = kagglehub.dataset_download("nih-chest-xrays/data")
 
@@ -45,3 +47,7 @@ labels=[
     'Pneumonia',
     'Pneumothorax'
 ]
+
+# function to view images based on index
+def view_img(file_path, index):
+    return Image.open(file_path.iloc[index,0])
