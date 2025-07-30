@@ -51,3 +51,9 @@ labels=[
 # function to view images based on index
 def view_img(file_path, index):
     return Image.open(file_path.iloc[index,0])
+
+def calculate_featuremap_size(input_size, padding, stride, kernel_size):
+    return ((input_size + (2 * padding) - kernel_size) // stride) + 1
+
+def maxpool2d_size(input_size, padding, stride, kernel_size):
+    return ((input_size - kernel_size + 2 * padding ) // stride) + 1
